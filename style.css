@@ -12,6 +12,29 @@
 .sidebar {
     grid-column: 1 / 2;
     grid-row: 1 / 6;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 50px 200px 150px;
+}
+
+.sidebar .dashboard-title {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.sidebar .dashboard-list {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    list-style: none;
+    margin-left: -40px;
+}
+
+.sidebar .settings-list {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    list-style: none;
+    margin-left: -40px;
+
 }
 
 .main-content {
