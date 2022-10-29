@@ -12,39 +12,61 @@
     display: grid;
     grid-template-rows: 1fr 1.5fr;
     background-color: white;
+    box-shadow: 0 0 7px 5px rgba(133, 133, 133, 0.541);
+    clip-path: inset(0px 0px -25px 0px);
 }
 
 .header .header-row-1 {
     display: grid;
-    grid-template-areas: 
-        ". search search search search search . button . name";
+    grid-template-columns: repeat(15, 1fr);
+    grid-row: 1 / 2;
     align-items: center;
 }
 
 .header .header-row-1 input {
-    grid-area: search;
     height: 30px;
+    grid-column: 2 / 10;
     border: none;
     border-radius: 100px;
     background-color:rgba(180, 181, 182, 0.733);
 }
 
-.header .header-row-1 button {
-    grid-area: button;
-    height: 30px;
+.header .header-row-1 .search-icon {
+    height: 25px;
+    justify-self: end;
+    padding-right: 10px;
+}
+
+.header .header-row-1 .notifications {
+    height: 25px;
+    grid-column: 11 / 12;
+    justify-self: center;
+}
+
+.header .header-row-1 .avatar {
+    height: 40px;
+    justify-self: center;
 }
 
 .header .header-row-1 p {
-    grid-area: name;
     font-size: 20px;
     font-weight: 600;
+    grid-column: 13 / 15;
+    justify-self: center;
 }
 
 .header .header-row-2 {
     display: grid;
-    grid-template-areas: 
-        ". intro intro intro . . . buttons buttons buttons .";
-        align-items: center;
+    grid-row: 2 / 3;
+    grid-template-areas:
+        ". avatar intro intro intro intro . . . buttons buttons . .";
+    align-items: center;
+}
+
+.header .header-row-2 .avatar {
+    grid-area: avatar;
+    height: 80px;
+    justify-self: center;
 }
 
 .header .header-row-2 p {
