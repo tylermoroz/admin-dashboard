@@ -1,9 +1,12 @@
+html,body {
+    margin:0;
+    padding:0;
+}
+
 .container {
     display: grid;
-    min-height: 100vh;
-    max-height: 100vh;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 200px);
 }
 
 .header {
@@ -99,12 +102,13 @@
 
 .sidebar {
     grid-column: 1 / 2;
-    grid-row: 1 / 6;
+    grid-row: 1 / 7;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 125px 400px 175px;
     background-color: rgb(0, 153, 255);
     color: white;
+    height: 100%;
 }
 
 .sidebar .sidebar-top {
@@ -214,35 +218,27 @@
 
 .main-content {
     grid-column: 2 / 7;
-    grid-row: 2 / 6;
+    grid-row: 2 / 7;
     background-color: rgba(180, 181, 182, 0.733);
     display: grid;
-    grid-template-columns: repeat(20, 1fr);
+    grid-template-columns: 1.5fr 1.5fr 1fr;
     grid-template-rows: repeat(6, 1fr);
-    padding-top: 20px;
+    padding: 20px;
+    padding-bottom: 40px;
+    column-gap: 30px;
 }
 
 .main-content .projects {
-    grid-column: 1 / 15;
-    grid-row: 1 / 8;
+    grid-column: 1 / 3;
+    grid-row: 1 / 7;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 40px 1fr 1fr 1fr;
-    margin-left: 20px;
+    gap: 30px;
 }
 
 .main-content .projects h1 {
-    font-size: 26px;
-}
-
-.main-content .projects .cards {
-    padding-top: 20px;
-    display: grid;
-    grid-column: 1 / 3;
-    grid-row: 2 / 5;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 20px;
+    font-size: 28px;
 }
 
 .main-content .projects .card {
@@ -255,13 +251,43 @@
     position: relative;
 }
 
+.main-content .projects #card-1 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.main-content .projects #card-2 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.main-content .projects #card-3 {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
+
+.main-content .projects #card-4 {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+.main-content .projects #card-5 {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+}
+
+.main-content .projects #card-6 {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+}
+
 .main-content .projects .card h1 {
-    font-size: 20px;
+    font-size: 28px;
     margin-bottom: -15px;
 }
 
 .main-content .projects .card p {
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .main-content .projects .card .card-icons {
@@ -277,12 +303,12 @@
 }
 
 .main-content .side-content {
+    grid-column: 3 / 4;
+    grid-row: 1 / 7;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 40px 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-column: 16 / 21;
-    grid-row: 1 / 8;
-    gap: 20px;
+    grid-template-rows: 2fr;
+    gap: 30px;
 }
 
 .main-content .announcements {
@@ -291,23 +317,22 @@
 }
 
 .main-content .announcements h1 {
-    font-size: 26px
+    font-size: 28px
 }
 
 .main-content .announcements .announcement-card {
     border-radius: 5px;
     background-color: white;
     padding: 20px;
-    margin-right: 20px;
 }
 
 .main-content .announcements .announcement-card h2 {
-    font-size: 16px;
+    font-size: 24px;
     margin-bottom: -15px;
 }
 
 .main-content .announcements .announcement-card p {
-    font-size: 12px;
+    font-size: 15px;
 }
 
 .main-content .announcements .announcement-card .share-day {
@@ -317,22 +342,42 @@
 
 .main-content .trending {
     grid-column: 1 / 2;
-    grid-row: 5 / 8;
+    grid-row: 2 / 3;
     font-size: 14px;
 }
 
 .main-content .trending h1 {
-    font-size: 26px;
+    font-size: 28px;
 }
 
 .main-content .trending .trending-card {
-    border-radius: 20px;
+    border-radius: 5px;
     background-color: white;
     padding: 20px;
-    margin-right: 20px;
+}
+
+.main-content .trending .trending-card .trending-profile {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.main-content .trending img {
+    height: 40px;
+    grid-column: 1 / 2;
+    justify-self: center;
+    align-self: center;
+}
+
+.main-content .trending .user {
+    grid-column: 2 / 3;
 }
 
 .main-content .trending .trending-card .username {
     font-weight: 600;
+    font-size: 20px;
     margin-bottom: -15px;
+}
+
+.main-content .trending .trending-card p {
+    font-size: 18px;
 }
